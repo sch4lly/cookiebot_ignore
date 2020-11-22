@@ -1,0 +1,20 @@
+<?php
+
+function cookiebot_ignore_library_info_alter(&$libraries, $extension) {
+
+  $config = \Drupal::config('cookiebot_ignore.settings');
+  $ignore_string = $config->get('cookiebot_ignore.ignore');
+
+  if($ignore_string) {
+    $cookiebot_whitelist_extensions = preg_split("/\\r\\n|\\r|\\n/", $ignore_string);
+    if(in_array($extension, $cookiebot_whitelist_extensions)) {
+      foreach ($libraries as $library_name => $library) {
+        if(!empty($library['js'])) {
+          foreach ($library['js'] as $js => $arr) {
+            $libraries[$library_name]['js'][$js]['attributes'] = ['data-cookieconsent' => 'ignore' ];
+          }
+        }
+      }
+    }
+  }
+}

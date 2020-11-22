@@ -1,0 +1,9 @@
+cookiebot_ignore.settings:
+  path: '/admin/config/system/cookiebot-ignore'
+  defaults:
+    _form: 'Drupal\cookiebot_ignore\Form\CookiebotIgnoreSettingsForm'
+    _title: 'Cookiebot Ignore Settings'
+  requirements:
+    _permission: 'administer cookiebot ignore settings'
+  options:
+    _admin_route: TRUE

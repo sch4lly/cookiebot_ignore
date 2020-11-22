@@ -1,0 +1,7 @@
+name: Cookiebot Ignore
+description: This module allows you to exclude JavaScript from Cookiebot auto-block mode and thus being ignored
+package: webiator.de
+type: module
+
+version: VERSION
+core_version_requirement: ^8.8.0 || ^9.0

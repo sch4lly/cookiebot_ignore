@@ -1,0 +1,6 @@
+cookiebot_ignore.settings:
+  title: 'Cookiebot ignore settings'
+  parent: system.admin_config_system
+  description: 'List which javascript libraries to ignore by cookiebot auto blocking mechanism.'
+  route_name: cookiebot_ignore.settings
+  weight: 10
