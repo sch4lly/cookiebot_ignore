@@ -2,5 +2,5 @@
     "name": "drupal/cookiebot_ignore",
     "description": "This module allows you to exclude JavaScript from Cookiebot auto-block mode and thus being ignored",
     "type": "drupal-module",
-    "license": "GPL-2.0-or-later",
+    "license": "GPL-2.0-or-later"
 }
